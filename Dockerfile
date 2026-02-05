@@ -6,7 +6,7 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build
+RUN ls -la app/ && npm run build
 
 # ===== RUN STAGE =====
 FROM node:18-alpine
