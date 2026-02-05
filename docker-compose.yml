@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  nextjs:
+    build: .
+    container_name: nextjs-ppdb
+    expose:
+      - "3050"
+    restart: always
+    networks:
+      - root_pln-network
+
+networks:
+  root_pln-network:
+    external: true
